@@ -1,14 +1,15 @@
 format = """
-[\ue0b6](#458588)\
+[\ue0b6](#33395b)\
 $username\
-[\ue0b0](bg:#f09758 fg:#458588)\
+[\ue0b0](bg:#ff972e fg:#33395b)\
 $hostname\
-[\ue0b0](#f09758)\
+[\ue0b0](bg:#277b48 fg:#f09758)\
 $localip\
 $shlvl\
 $singularity\
 $kubernetes\
 $directory\
+[\ue0b0 ](#277b48)\
 $vcsh\
 $git_branch\
 $git_commit\
@@ -83,33 +84,33 @@ $shell\
 $character"""
 
 [username]
-style_user = "bg:#458588 fg:#282828"
-style_root = "bg:#458588 fg:#282828"
-format = "[$user]($style)"
+style_user = "bg:#33395b fg:#efeef4"
+style_root = "bg:#33395b fg:#efeef4"
+format = "[$user ]($style)"
 disabled = false
 show_always = true
 
 [hostname]
-style = "bg:#f09758 fg:#282828"
+style = "bg:#f09758 fg:#efeef4"
 ssh_only = false
-format = '[Vivobook-Pro-14X]($style)'
+format = '[ Vivobook-Pro-14X ]($style)'
 trim_at = "."
 disabled = false
 
 [character]
-success_symbol = "[➜](bold green)"
+success_symbol = "[](bold green)"
 error_symbol = "[✗](bold red)"
 
 [directory]
-format = ' [$path]($style)[$read_only]($read_only_style) '
-read_only = " 🔒"
+format = '[ $path ]($style)[$read_only]($read_only_style)'
+read_only = " "
 truncation_length = 1
 truncate_to_repo = true
-truncation_symbol = '…/'
-style = "bold italic blue"
+truncation_symbol = '易'
+style = "bg:#277b48 fg:#efeef4 italic"
 
 [dotnet]
-format = 'via [$symbol($version )(=> $tfm )]($style)'
+format = 'via [$symbol($version )]($style)'
 
 [cmd_duration]
 min_time = 4
