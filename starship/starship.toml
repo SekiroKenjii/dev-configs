@@ -86,16 +86,16 @@ $character"""
 [username]
 style_user = "bg:#33395b fg:#efeef4"
 style_root = "bg:#33395b fg:#efeef4"
-format = "[$user ]($style)"
+format = "[thuongvo ]($style)"
 disabled = false
 show_always = true
 
 [hostname]
-style = "bg:#f09758 fg:#efeef4"
 ssh_only = false
 format = '[ Vivobook-Pro-14X ]($style)'
 trim_at = "."
 disabled = false
+style = "bg:#f09758 fg:#efeef4"
 
 [character]
 success_symbol = "[](bold green)"
@@ -104,10 +104,11 @@ error_symbol = "[✗](bold red)"
 [directory]
 format = '[ $path ]($style)[$read_only]($read_only_style)'
 read_only = " "
-truncation_length = 1
+truncation_length = 2
 truncate_to_repo = true
-truncation_symbol = '易'
+truncation_symbol = '-> '
 style = "bg:#277b48 fg:#efeef4 italic"
+read_only_style = "bg:#277b48 fg:#efeef4 italic"
 
 [dotnet]
 format = 'via [$symbol($version )]($style)'
