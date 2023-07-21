@@ -1,3 +1,6 @@
+# Font: Liga SFMono Nerd Font
+# See: https://github.com/SekiroKenjii/dev-fonts
+
 format = """
 [\ue0b6](#33395b)\
 $username\
@@ -92,23 +95,38 @@ show_always = true
 
 [hostname]
 ssh_only = false
-format = '[ Vivobook-Pro-14X ]($style)'
+format = "[ \uf871 Vivobook-Pro-14X ]($style)"
 trim_at = "."
 disabled = false
 style = "bg:#f09758 fg:#efeef4"
+value = "Vivobook-Pro-14X"
 
 [character]
-success_symbol = "[](bold green)"
-error_symbol = "[✗](bold red)"
+success_symbol = "[\ue285](bold green)"
+error_symbol = "[\uf93b](bold red)"
 
 [directory]
 format = '[ $path ]($style)[$read_only]($read_only_style)'
-read_only = " "
+read_only = "\uf982"
 truncation_length = 2
 truncate_to_repo = true
-truncation_symbol = '-> '
+truncation_symbol = "\ufb0c "
 style = "bg:#277b48 fg:#efeef4 italic"
-read_only_style = "bg:#277b48 fg:#efeef4 italic"
+read_only_style = "bg:#277b48"
+
+[git_branch]
+symbol = "\uf408 "
+
+[git_status]
+ahead = "\ufc53"
+behind = "\ufc51"
+conflicted="\ufb86"
+deleted = "\ufae7"
+renamed = "\ufb0d "
+modified = "\uf992"
+untracked = "\uf7d5"
+staged = "\ufc03"
+stashed = "\ufb9d"
 
 [dotnet]
 format = 'via [$symbol($version )]($style)'
