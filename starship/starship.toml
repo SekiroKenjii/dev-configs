@@ -99,7 +99,6 @@ format = "[ \uf871 Vivobook-Pro-14X ]($style)"
 trim_at = "."
 disabled = false
 style = "bg:#f09758 fg:#efeef4"
-value = "Vivobook-Pro-14X"
 
 [character]
 success_symbol = "[\ue285](bold green)"
