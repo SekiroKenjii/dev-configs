@@ -93,6 +93,9 @@ format = "[thuongvo ]($style)"
 disabled = false
 show_always = true
 
+# TODO: dynamic hostname icon
+# Windows 11: \uf871
+# Ubuntu: \uf31c
 [hostname]
 ssh_only = false
 format = "[ \uf871 Vivobook-Pro-14X ]($style)"
