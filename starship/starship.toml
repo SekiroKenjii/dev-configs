@@ -7,134 +7,89 @@ $username\
 [\ue0b0](bg:#ff972e fg:#33395b)\
 $hostname\
 [\ue0b0](bg:#277b48 fg:#f09758)\
-$localip\
-$shlvl\
-$singularity\
-$kubernetes\
 $directory\
 [\ue0b0 ](#277b48)\
-$vcsh\
 $git_branch\
-$git_commit\
 $git_state\
-$git_metrics\
 $git_status\
-$hg_branch\
-$docker_context\
-$package\
-$c\
-$cmake\
-$cobol\
-$daml\
-$dart\
-$deno\
+$git_metrics\
+$fill\
 $dotnet\
-$elixir\
-$elm\
-$erlang\
-$golang\
-$guix_shell\
-$haskell\
-$haxe\
-$helm\
-$java\
-$julia\
-$kotlin\
-$lua\
-$nim\
-$nodejs\
-$ocaml\
-$opa\
-$perl\
-$php\
-$pulumi\
-$purescript\
-$python\
-$raku\
-$rlang\
-$red\
-$ruby\
-$rust\
-$scala\
-$swift\
-$terraform\
-$vlang\
-$vagrant\
-$zig\
-$buf\
-$nix_shell\
-$conda\
-$meson\
-$spack\
-$memory_usage\
-$aws\
-$gcloud\
-$openstack\
-$azure\
-$env_var\
-$crystal\
-$custom\
-$sudo\
-$cmd_duration\
+$cmd_duration $jobs $time\
 $line_break\
-$jobs\
-$battery\
-$time\
-$status\
 $os\
-$container\
-$shell\
 $character"""
 
 [username]
 style_user = "bg:#33395b fg:#efeef4"
 style_root = "bg:#33395b fg:#efeef4"
-format = "[thuongvo ]($style)"
+format = '[thuongvo ]($style)'
 disabled = false
 show_always = true
 
-# TODO: dynamic hostname icon
-# Windows 11: \uf871
-# Ubuntu: \uf31c
 [hostname]
 ssh_only = false
-format = "[ \uf871 Vivobook-Pro-14X ]($style)"
+format = '[ Vivobook-Pro-14X ]($style)'
 trim_at = "."
 disabled = false
-style = "bg:#f09758 fg:#efeef4"
-
-[character]
-success_symbol = "[\ue285](bold green)"
-error_symbol = "[\uf93b](bold red)"
+style = "bg:#f09758 fg:#1d1f21"
 
 [directory]
 format = '[ $path ]($style)[$read_only]($read_only_style)'
 read_only = "\uf982"
-truncation_length = 2
+truncation_length = 1
 truncate_to_repo = true
-truncation_symbol = "\ufb0c "
+truncation_symbol = "../"
 style = "bg:#277b48 fg:#efeef4 italic"
 read_only_style = "bg:#277b48"
 
 [git_branch]
-symbol = "\uf408 "
+symbol = "\uf09b "
+format = '[$symbol$branch]($style) '
+style = "bright-black"
 
 [git_status]
-ahead = "\ufc53"
-behind = "\ufc51"
-conflicted="\ufb86"
-deleted = "\ufae7"
-renamed = "\ufb0d "
-modified = "\uf992"
-untracked = "\uf7d5"
-staged = "\ufc03"
-stashed = "\ufb9d"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "bright-blue"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[git_metrics]
+disabled = false
+
+[fill]
+symbol = " "
 
 [dotnet]
-format = 'via [$symbol($version )]($style)'
+format = '[$symbol($version )]($style)'
 
 [cmd_duration]
 min_time = 4
 show_milliseconds = true
 disabled = false
 style = "bold italic red"
+
+[jobs]
+symbol = "\ue615"
+style = "bold red"
+number_threshold = 1
+format = '[$symbol]($style)'
+
+[time]
+disabled = false
+style = "bold white"
+format = '[$time]($style)'
+
+[os]
+disabled = false
+format = '$symbol '
+
+[os.symbols]
+Ubuntu = "\ue73a"
+Windows = "\ue62a"
+
+[character]
+success_symbol = "[\ue285](bold green)"
+error_symbol = "[\uf00d](bold red)"
